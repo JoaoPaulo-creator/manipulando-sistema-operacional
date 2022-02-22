@@ -7,6 +7,7 @@ def update_packages():
 	update_packages = os.system('sudo apt update')
 	return update_packages
 
+
 def upgrade_packages():
 	upgrade_packages = os.system('sudo apt upgrade -y')
 	return upgrade_packages

@@ -4,6 +4,7 @@ from os import system
 from os import chdir as cd
 from time import sleep
 
+
 def criando_diretorio():
     try:
         _mk = mk(f'/home/test/TESTE')    
@@ -25,9 +26,11 @@ def mudando_de_diretorio():
     _cd = cd('/home/test/TESTE')
     return _cd
 
+
 def retornando_dir_antigo():
     _cd = cd('/home/test')
     return _cd
+
 
 def verificando_onde_estou():
     s = system('pwd')
@@ -59,7 +62,6 @@ def main():
     retornando_dir_antigo()
     removendo_diretorio()
     _ls()
-
 
 
 if __name__=='__main__':
