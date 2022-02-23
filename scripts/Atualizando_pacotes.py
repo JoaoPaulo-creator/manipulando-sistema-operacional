@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 
-from constants import _MANJARO, _POP_OS
+from constants import _MANJARO, _POP_OS, _FEDORA
 import distro
 import os
 
 distro_list = ['ubuntu', 'POP!_OS', 'fedora', '_manjaro']
-dict_ = {'manjaro': _MANJARO}
+dict_ = {
+	'manjaro': _MANJARO,
+	'fedora': _FEDORA}
 
 _id = distro.id()
 
