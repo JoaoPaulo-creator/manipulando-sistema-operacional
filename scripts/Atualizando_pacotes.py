@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-from time import sleep
-import os
 
-_MANJARO = 'sudo pacman -Syu --noconfirm'
-_POP_OS = 'sudo apt update && sudo apt upgrade -y'
+from constants import _MANJARO, _POP_OS
+import distro
+import os
 
 distro_list = ['ubuntu', 'POP!_OS', 'fedora', '_manjaro']
 dict_ = {'manjaro': _MANJARO}
+
+_id = distro.id()
 
 
 def update_packages():
@@ -16,8 +17,9 @@ def update_packages():
 		else:
 			print('Not found')
 
-	except e:
+	except Exception:
 		return 'Not found'
+
 
 def upgrade_packages():
 	upgrade_packages = os.system('sudo apt upgrade -y')
