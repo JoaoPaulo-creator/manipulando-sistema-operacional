@@ -16,10 +16,10 @@ def update_packages():
 		if _id in dict_:
 			os.system(dict_.get(_id))
 		else:
-			print('Not found')
+			print(f'{_id} not found in dictionary')
 
 	except Exception:
-		return 'Not found'
+		return 'Some error message here'
 
 
 def upgrade_packages():
