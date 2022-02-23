@@ -11,7 +11,7 @@ dict_ = {
 _id = distro.id()
 
 
-def update_packages():
+def update_upgrade_packages():
 	try:
 		if _id in dict_:
 			os.system(dict_.get(_id))
@@ -22,14 +22,8 @@ def update_packages():
 		return 'Some error message here'
 
 
-def upgrade_packages():
-	upgrade_packages = os.system('sudo apt upgrade -y')
-	return upgrade_packages
-
-
 def main():
-	update_packages()
-	upgrade_packages()
+	update_upgrade_packages()
 	
 	
 if __name__ == '__main__':
