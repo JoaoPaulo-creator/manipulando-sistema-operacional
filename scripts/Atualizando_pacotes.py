@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 
-from constants import _MANJARO, _POP_OS, _FEDORA
+from constants import PACMAN_PACKAGE_MANAGER, APT_PACKAGE_MANAGER, DNF_PACKAGE_MANAGER
 import distro
 import os
 
+
+#distro based
+UBUNTU_BASED = {'zorin': _POP_OS, 'pop': _POP_OS, 'mint': _POP_OS}
+ARCH_BASED = {'manjaro': PACMAN_PACKAGE_MANAGER, 'reborn': PACMAN_PACKAGE_MANAGER}
+
+
 dict_ = {
-	'manjaro': _MANJARO,
+	'manjaro': PACMAN_PACKAGE_MANAGER,
 	'fedora': _FEDORA}
 
 _id = distro.id()
