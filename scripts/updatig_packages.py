@@ -26,7 +26,7 @@ def adding_to_dict(distro_id, dictionary, dict_based_a, dict_based_b):
 				dictionary[distro_id] = PACMAN_PACKAGE_MANAGER
 
 	except NameError:
-		print()
+		print('An error was returned while trying to add distro id to dictionary')
 
 
 
