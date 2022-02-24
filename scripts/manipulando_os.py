@@ -7,7 +7,7 @@ from time import sleep
 
 def criando_diretorio():
     try:
-        _mk = mk(f'/home/test/TESTE')    
+        _mk = mk(f'/home/$USER/TESTE')
         return mk    
     except FileExistsError:
         removendo_diretorio()
@@ -15,7 +15,7 @@ def criando_diretorio():
 
 def removendo_diretorio():
     try:
-        _rd = rd(f'/home/test/TESTE')
+        _rd = rd(f'/home/$USER/TESTE')
         system('cd ..')
         return _rd
     except OSError:
@@ -23,12 +23,12 @@ def removendo_diretorio():
 
 
 def mudando_de_diretorio():
-    _cd = cd('/home/test/TESTE')
+    _cd = cd('/home/$USER/TESTE')
     return _cd
 
 
 def retornando_dir_antigo():
-    _cd = cd('/home/test')
+    _cd = cd('/home/$USER')
     return _cd
 
 
