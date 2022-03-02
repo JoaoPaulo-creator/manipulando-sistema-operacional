@@ -16,7 +16,7 @@ dict_ = {
 
 _id = distro.id()
 
-#FIXME
+#FIXME - Se a string não estiver na lista, um looping bizarro ocorre, e eu não tenho ideia do porque
 def adding_to_dict(distro_id, dictionary, dict_based_a, dict_based_b):
 	try:
 		if distro_id not in dictionary:
